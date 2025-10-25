@@ -1,14 +1,22 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-class AppPar extends StatelessWidget {
-  const AppPar({super.key});
-
+class CustomAppPar extends StatelessWidget {
+  const CustomAppPar({
+    super.key,
+    this.iconBar,
+    this.onTaps,
+    required this.title,
+  });
+  final Icon? iconBar;
+  final Function()? onTaps;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          'Notes',
+        Text(
+          title,
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w500,
@@ -22,7 +30,10 @@ class AppPar extends StatelessWidget {
             color: const Color.fromARGB(77, 158, 158, 158),
             borderRadius: BorderRadius.circular(9),
           ),
-          child: const Icon(CupertinoIcons.search),
+          child: InkWell(
+            onTap: onTaps,
+            child: iconBar ?? Icon(CupertinoIcons.search),
+          ),
         ),
       ],
     );

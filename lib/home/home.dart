@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Gap(70),
-            AppPar(),
+            CustomAppPar(title: 'Notes',),
             Gap(20),
             Expanded(child: CustomListview()),
           ],
