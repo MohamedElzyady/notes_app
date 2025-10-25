@@ -78,6 +78,9 @@ flutter:
     - family: Retro
       fonts:
         - asset: assets/fonts/BitcountGridSingle-Regular.ttf
+    - family: RobotoSlab
+      fonts:
+        - asset: assets/fonts/RobotoSlab-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

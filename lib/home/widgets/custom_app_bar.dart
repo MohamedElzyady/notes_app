@@ -9,7 +9,11 @@ class AppPar extends StatelessWidget {
       children: [
         const Text(
           'Notes',
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'RobotoSlab',
+          ),
         ),
         const Spacer(),
         Container(

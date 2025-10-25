@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class NoteItem extends StatelessWidget {
+  const NoteItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,7 @@ class MyWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          
           Gap(20),
           ListTile(
             title: const Text(
@@ -31,7 +32,7 @@ class MyWidget extends StatelessWidget {
                 'Bulid your first app by\n hamo elzyady',
                 style: TextStyle(
                   color: Color.fromARGB(107, 0, 0, 0),
-                  fontFamily: '',
+                  fontFamily: 'RobotoSlab',
                   fontSize: 17,
                 ),
               ),
