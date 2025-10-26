@@ -11,7 +11,9 @@ class CustomListview extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 14),
-          child: NoteItem(),
+          child: NoteItem(
+            
+          ),
         );
       },
     );

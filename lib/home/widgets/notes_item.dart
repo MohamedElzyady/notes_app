@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:note_app/home/edit_notes.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
-
+  const NoteItem({super.key, this.onTap});
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -44,10 +44,13 @@ class NoteItem extends StatelessWidget {
                   ),
                 ),
               ),
-              trailing: Icon(
-                CupertinoIcons.delete_solid,
-                color: Colors.black,
-                size: 28,
+              trailing: InkWell(
+                onTap: onTap,
+                child: Icon(
+                  CupertinoIcons.delete_solid,
+                  color: Colors.black,
+                  size: 28,
+                ),
               ),
             ),
             Gap(20),

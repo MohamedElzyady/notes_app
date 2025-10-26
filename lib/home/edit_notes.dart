@@ -24,6 +24,7 @@ class EditNotes extends StatelessWidget {
                 },
                 iconBar: Icon(CupertinoIcons.check_mark),
               ),
+              
               Gap(20),
               CustomTextfield(hint: 'Title Notes'),
               Gap(40),
