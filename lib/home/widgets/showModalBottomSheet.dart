@@ -15,7 +15,11 @@ class _ShowmodalbottomsheetState extends State<Showmodalbottomsheet> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 14),
+      padding: EdgeInsets.only(
+        left: 14,
+        right: 14,
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+      ),
       child: BlocConsumer<AddNotesCubit, AddNotesState>(
         listener: (context, state) {
           if (state is AddNotesFaliuer) {

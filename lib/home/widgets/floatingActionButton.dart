@@ -13,8 +13,11 @@ class Floatingactionbutton extends StatelessWidget {
       ),
       onPressed: () {
         showModalBottomSheet(
+          isScrollControlled: true,
           backgroundColor: const Color.fromARGB(255, 10, 109, 86),
-          shape: RoundedSuperellipseBorder(borderRadius: BorderRadius.circular(20)),
+          shape: RoundedSuperellipseBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
           context: context,
           builder: (context) {
             return Showmodalbottomsheet();
