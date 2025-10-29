@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 
 class CustomBottom extends StatelessWidget {
-  const CustomBottom({super.key, this.onTap});
-final Function()? onTap;
+  const CustomBottom({super.key, this.onTap, this.isLodaing = false});
+  final Function()? onTap;
+  final bool isLodaing;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,15 +16,19 @@ final Function()? onTap;
       child: Center(
         child: InkWell(
           onTap: onTap,
-          child: Text(
-            'Add',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-              fontFamily: 'RobotoSlab',
-              fontSize: 20,
-            ),
-          ),
+          child: isLodaing
+              ? const CircularProgressIndicator(
+                  color: Color.fromARGB(255, 19, 104, 6),
+                )
+              : const Text(
+                  'Add',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'RobotoSlab',
+                    fontSize: 20,
+                  ),
+                ),
         ),
       ),
     );
