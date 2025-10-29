@@ -5,9 +5,11 @@ import 'package:note_app/constans/varuible.dart';
 import 'package:note_app/cubit/cubit/add_notes_cubit.dart';
 import 'package:note_app/home/home.dart';
 import 'package:note_app/models/note_model.dart';
+import 'package:note_app/simple_bloc_observer.dart';
 
 void main() async {
   await Hive.initFlutter();
+  Bloc.observer = MyBlocObserver();
   Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox(kvaruabil);
   runApp(const MyApp());
@@ -20,9 +22,9 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AddNotesCubit()),
+
         // BlocProvider(create: (context) => AddNotesCubit()),
-        
-        ],
+      ],
 
       child: MaterialApp(
         theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Retro'),
